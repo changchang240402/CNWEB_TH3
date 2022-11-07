@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form_1</title>
+        <style>
+
+.input-row {
+  margin-bottom: 1.5rem;
+}
+.input-row input {
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 1rem;
+  outline: none;
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+}
+.input-row input:focus {
+  border: 1px solid #00bfa6;
+  outline: none;
+}
+.input__note textarea {
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid #ccc;
+  user-select: none;
+  resize: none;
+  padding: 1rem;
+}
+.input__note textarea:focus {
+  border: 1px solid #00bfa6;
+}
+.input-row {
+  position: relative;
+}
+.input-row:last-child {
+  margin-bottom: 0;
+}
+.input-row.success input {
+  border-color: #2ecc71;
+}
+.input-row.error input {
+  border-color: #e74c3c;
+}
+.input-row small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: -20px;
+  left: 43%;
+  visibility: hidden;
+  font-size: 15px;
+}
+.input-row.error small {
+  visibility: visible;
+}
+.btn {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 8px 15px !important;
+}
+
+
+#btn-ok, #btn-reset {
+  display: inline-block;
+  color: #fff;
+  background-color: #00bfa6;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none !important;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+}
+
+#btn-ok:hover, #btn-reset:hover{
+  background-color: red;
+  color: aliceblue;
+}
+</style>
+
+    </head>
+    <body bgcolor="#66FF99">
+      <div class="login">
+        <p style="text-align:center;font-size: 30px;">Login</p>
+        <div class="input-row" style="font-size:30px;text-align: center; line-height:1.6;">
+            <label for="use">Usename</label>
+            <input
+              type="text"
+              style="font-size:30px;width:350px;"
+              id="username"
+              autocomplete="off"
+            />
+            <small>Error message</small>
+          </div>
+          <div class="input-row" style="font-size:30px;text-align: center; line-height:1.6;">
+            <label for="pass">Password</label>
+            <input
+              type="password"
+              style="font-size:30px;width:350px;"
+              id="password"
+              autocomplete="off"
+            />
+            <small>Error message</small>
+          </div>
+          
+          <div class="input-row" style="text-align: center;font-size:0.2cm;">
+            <button class="btn" id="btn-ok" style="font-size:20px;">OK</button>
+            <button class="btn" id="btn-reset" style="font-size:20px;">Reset</button>
+        </div>
+    </div>
+    </body>
+    <script src="form11.js"></script>
+</html>
